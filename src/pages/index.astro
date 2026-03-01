@@ -1,0 +1,362 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="HairGrade AI — Know Your Hair Loss Stage in 30 Seconds"
+  description="AI-powered Norwood & Ludwig scale analysis. Snap a photo, get your stage, and receive a personalized treatment plan."
+>
+
+  <!-- Ambient Background Glows -->
+  <div class="fixed inset-0 pointer-events-none z-0" aria-hidden="true">
+    <div class="ambient-glow w-[500px] h-[500px] md:w-[700px] md:h-[700px] bg-green-500/[0.04] -top-[200px] -right-[100px] md:right-[5%] absolute"></div>
+    <div class="ambient-glow w-[400px] h-[400px] md:w-[500px] md:h-[500px] bg-blue-500/[0.03] bottom-[20%] -left-[150px] absolute"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-5 md:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="text-text-primary font-semibold text-base tracking-tight flex items-center gap-2">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 1 0 20"/><path d="M12 2a10 10 0 0 0 0 20"/><path d="M2 12h20"/></svg>
+        HairGrade AI
+      </a>
+      <a href="#early-access" class="text-sm font-medium text-green-500 border border-green-500/25 rounded-full px-4 py-1.5 hover:bg-green-500/10 transition-colors duration-300">
+        Get Early Access
+      </a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative pt-28 md:pt-36 lg:pt-44 pb-16 md:pb-24">
+      <div class="max-w-6xl mx-auto px-5 md:px-8">
+        <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+
+          <!-- Text -->
+          <div class="flex-1 text-center lg:text-left">
+            <h1 class="gradient-text text-[2.5rem] leading-[1.08] sm:text-5xl md:text-6xl lg:text-[4.25rem] font-bold tracking-tight mb-6 reveal">
+              Know Your Hair Loss Stage in 30&nbsp;Seconds
+            </h1>
+            <p class="text-text-secondary text-base sm:text-lg md:text-xl max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed reveal reveal-d1">
+              AI-powered Norwood & Ludwig scale analysis. Snap a photo, get your stage, and receive a personalized treatment plan.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start reveal reveal-d2">
+              <a href="#early-access" class="cta-glow inline-flex items-center gap-2.5 bg-green-500 hover:bg-green-400 text-dark font-semibold px-7 py-3.5 rounded-full text-base transition-colors duration-300">
+                Get Early Access
+                <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+            <p class="text-zinc-600 text-sm mt-4 reveal reveal-d3">Free during beta &middot; No credit card required</p>
+          </div>
+
+          <!-- Phone Mockup -->
+          <div class="shrink-0 phone-float reveal reveal-d2">
+            <div class="phone-mockup">
+              <div class="phone-frame">
+                <div class="phone-notch"></div>
+                <div class="scan-line"></div>
+                <div class="phone-screen">
+                  <div class="phone-bar">
+                    <span class="pulse-dot"></span>
+                    HairGrade AI
+                  </div>
+
+                  <div class="ring-wrap">
+                    <svg viewBox="0 0 140 140">
+                      <circle class="ring-track" cx="70" cy="70" r="60"/>
+                      <circle class="ring-progress" cx="70" cy="70" r="60"/>
+                    </svg>
+                    <div class="ring-center">
+                      <span class="ring-label">Stage</span>
+                      <span class="ring-value">II</span>
+                    </div>
+                  </div>
+
+                  <div class="phone-scale-label">Norwood Scale</div>
+
+                  <div class="phone-metrics">
+                    <div class="phone-metric">
+                      <span class="metric-label">Confidence</span>
+                      <div class="metric-bar"><div class="metric-fill" style="width:89%"></div></div>
+                      <span class="metric-value">89%</span>
+                    </div>
+                    <div class="phone-metric">
+                      <span class="metric-label">Severity</span>
+                      <div class="metric-bar"><div class="metric-fill" style="width:30%"></div></div>
+                      <span class="metric-value">Low</span>
+                    </div>
+                    <div class="phone-metric">
+                      <span class="metric-label">Density</span>
+                      <div class="metric-bar"><div class="metric-fill" style="width:72%"></div></div>
+                      <span class="metric-value">72%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="relative py-20 md:py-28">
+      <div class="max-w-6xl mx-auto px-5 md:px-8">
+        <div class="text-center mb-14 md:mb-16">
+          <p class="text-green-500 text-xs font-medium uppercase tracking-[0.15em] mb-3 reveal">How It Works</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-text-primary reveal reveal-d1">Three Simple Steps</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
+          <div class="spotlight-card bg-surface/60 backdrop-blur-md rounded-3xl border border-white/[0.08] p-7 md:p-8 reveal">
+            <div class="relative z-10">
+              <div class="w-9 h-9 rounded-full bg-green-500 text-dark font-bold text-sm flex items-center justify-center mb-5">1</div>
+              <div class="w-11 h-11 rounded-xl bg-green-500/[0.08] flex items-center justify-center mb-4">
+                <svg class="w-5 h-5 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+              </div>
+              <h3 class="text-lg font-semibold text-text-primary mb-2">Take a Photo</h3>
+              <p class="text-text-secondary text-sm leading-relaxed">Snap a quick photo of your hairline from different angles.</p>
+            </div>
+          </div>
+
+          <div class="spotlight-card bg-surface/60 backdrop-blur-md rounded-3xl border border-white/[0.08] p-7 md:p-8 reveal reveal-d1">
+            <div class="relative z-10">
+              <div class="w-9 h-9 rounded-full bg-green-500 text-dark font-bold text-sm flex items-center justify-center mb-5">2</div>
+              <div class="w-11 h-11 rounded-xl bg-green-500/[0.08] flex items-center justify-center mb-4">
+                <svg class="w-5 h-5 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><line x1="7" x2="17" y1="12" y2="12"/></svg>
+              </div>
+              <h3 class="text-lg font-semibold text-text-primary mb-2">AI Analyzes Your Hair</h3>
+              <p class="text-text-secondary text-sm leading-relaxed">Our AI determines your Norwood or Ludwig stage with 85%+ accuracy.</p>
+            </div>
+          </div>
+
+          <div class="spotlight-card bg-surface/60 backdrop-blur-md rounded-3xl border border-white/[0.08] p-7 md:p-8 reveal reveal-d2">
+            <div class="relative z-10">
+              <div class="w-9 h-9 rounded-full bg-green-500 text-dark font-bold text-sm flex items-center justify-center mb-5">3</div>
+              <div class="w-11 h-11 rounded-xl bg-green-500/[0.08] flex items-center justify-center mb-4">
+                <svg class="w-5 h-5 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
+              </div>
+              <h3 class="text-lg font-semibold text-text-primary mb-2">Get Your Plan</h3>
+              <p class="text-text-secondary text-sm leading-relaxed">Receive evidence-based treatment recommendations personalized to your stage.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section id="stats" class="relative py-16 md:py-24">
+      <div class="max-w-6xl mx-auto px-5 md:px-8">
+        <div class="section-divider mb-16 md:mb-20"></div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6" id="stats-grid">
+          <div class="text-center reveal">
+            <div class="gradient-green text-4xl md:text-5xl font-bold mb-2" data-count="85" data-suffix="%">0%</div>
+            <p class="text-zinc-500 text-sm">of men experience hair loss</p>
+          </div>
+          <div class="text-center reveal reveal-d1">
+            <div class="gradient-green text-4xl md:text-5xl font-bold mb-2" data-count="50" data-suffix="%+">0%+</div>
+            <p class="text-zinc-500 text-sm">of women affected</p>
+          </div>
+          <div class="text-center reveal reveal-d2">
+            <div class="gradient-green text-4xl md:text-5xl font-bold mb-2">85-95%</div>
+            <p class="text-zinc-500 text-sm">AI classification accuracy</p>
+          </div>
+          <div class="text-center reveal reveal-d3">
+            <div class="gradient-green text-4xl md:text-5xl font-bold mb-2" data-count="9.5" data-prefix="$" data-suffix="B+" data-decimal="true">$0B+</div>
+            <p class="text-zinc-500 text-sm">global hair loss market</p>
+          </div>
+        </div>
+        <div class="section-divider mt-16 md:mt-20"></div>
+      </div>
+    </section>
+
+    <!-- Why HairGrade AI -->
+    <section id="why" class="relative py-16 md:py-24">
+      <div class="max-w-6xl mx-auto px-5 md:px-8">
+        <div class="text-center mb-14 md:mb-16">
+          <p class="text-green-500 text-xs font-medium uppercase tracking-[0.15em] mb-3 reveal">Features</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-text-primary reveal reveal-d1">Why HairGrade AI</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 max-w-4xl mx-auto">
+          <div class="spotlight-card bg-surface/60 backdrop-blur-md rounded-3xl border border-white/[0.08] p-7 md:p-8 reveal">
+            <div class="relative z-10">
+              <div class="w-11 h-11 rounded-xl bg-green-500/[0.08] flex items-center justify-center mb-4">
+                <svg class="w-5 h-5 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <h3 class="text-base font-semibold text-text-primary mb-2">Clinical-Grade AI</h3>
+              <p class="text-text-secondary text-sm leading-relaxed">Matches dermatologist accuracy (65-78%) using proven Norwood & Ludwig scales.</p>
+            </div>
+          </div>
+
+          <div class="spotlight-card bg-surface/60 backdrop-blur-md rounded-3xl border border-white/[0.08] p-7 md:p-8 reveal reveal-d1">
+            <div class="relative z-10">
+              <div class="w-11 h-11 rounded-xl bg-green-500/[0.08] flex items-center justify-center mb-4">
+                <svg class="w-5 h-5 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+              </div>
+              <h3 class="text-base font-semibold text-text-primary mb-2">Evidence-Based Plans</h3>
+              <p class="text-text-secondary text-sm leading-relaxed">Treatment recommendations backed by peer-reviewed research, not guesswork.</p>
+            </div>
+          </div>
+
+          <div class="spotlight-card bg-surface/60 backdrop-blur-md rounded-3xl border border-white/[0.08] p-7 md:p-8 reveal reveal-d2">
+            <div class="relative z-10">
+              <div class="w-11 h-11 rounded-xl bg-green-500/[0.08] flex items-center justify-center mb-4">
+                <svg class="w-5 h-5 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+              </div>
+              <h3 class="text-base font-semibold text-text-primary mb-2">Track Your Progress</h3>
+              <p class="text-text-secondary text-sm leading-relaxed">Before & after comparison with compliance tracking over time.</p>
+            </div>
+          </div>
+
+          <div class="spotlight-card bg-surface/60 backdrop-blur-md rounded-3xl border border-white/[0.08] p-7 md:p-8 reveal reveal-d3">
+            <div class="relative z-10">
+              <div class="w-11 h-11 rounded-xl bg-green-500/[0.08] flex items-center justify-center mb-4">
+                <svg class="w-5 h-5 text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </div>
+              <h3 class="text-base font-semibold text-text-primary mb-2">Privacy First</h3>
+              <p class="text-text-secondary text-sm leading-relaxed">Your photos are analyzed and deleted. No storage, no sharing, ever.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Early Access Form -->
+    <section id="early-access" class="relative py-20 md:py-32">
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
+        <div class="ambient-glow w-[400px] h-[400px] md:w-[500px] md:h-[500px] bg-green-500/[0.05]"></div>
+      </div>
+
+      <div class="max-w-2xl mx-auto px-5 md:px-8 relative z-10">
+        <div class="text-center mb-10 md:mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-text-primary mb-4 reveal">
+            Be the First to Try HairGrade&nbsp;AI
+          </h2>
+          <p class="text-text-secondary text-base md:text-lg reveal reveal-d1">
+            Join the waitlist and get exclusive early access when we launch.
+          </p>
+        </div>
+
+        <div class="tally-container bg-surface/70 backdrop-blur-xl rounded-3xl border border-white/[0.08] p-6 md:p-10 reveal reveal-d2">
+          <iframe
+            data-tally-src="https://tally.so/embed/NpAM2b?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+            loading="lazy"
+            width="100%"
+            height="300"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            title="HairGrade AI — Early Access">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/[0.05] py-10 md:py-12">
+    <div class="max-w-6xl mx-auto px-5 md:px-8 text-center">
+      <p class="text-zinc-500 text-sm mb-3">
+        HairGrade AI is a product of
+        <a href="https://auraworks.dev" target="_blank" rel="noopener" class="text-zinc-400 hover:text-text-primary transition-colors duration-200">AuraWorks</a>
+      </p>
+      <p class="text-zinc-600 text-xs leading-relaxed max-w-lg mx-auto mb-4">
+        HairGrade AI provides wellness insights only. It is not a medical diagnosis. Consult a healthcare professional for medical advice.
+      </p>
+      <p class="text-zinc-700 text-xs">&copy; 2026 AuraWorks. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Tally.so Embed Script -->
+  <script is:inline>
+    var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w;s.onload=v;s.onerror=v;d.body.appendChild(s)}
+  </script>
+
+  <!-- App Logic -->
+  <script is:inline>
+  (function() {
+    'use strict';
+
+    // Nav scroll effect
+    var nav = document.getElementById('nav');
+    var scrolled = false;
+    function checkNav() {
+      var s = window.scrollY > 40;
+      if (s !== scrolled) { scrolled = s; nav.classList.toggle('nav-scrolled', scrolled); }
+    }
+    window.addEventListener('scroll', checkNav, { passive: true });
+    checkNav();
+
+    // Scroll Reveal
+    var ro = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { e.target.classList.add('active'); ro.unobserve(e.target); }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(function(el) { ro.observe(el); });
+
+    // Spotlight Cards
+    document.querySelectorAll('.spotlight-card').forEach(function(card) {
+      card.addEventListener('mousemove', function(e) {
+        var r = card.getBoundingClientRect();
+        card.style.setProperty('--spot-x', (e.clientX - r.left) + 'px');
+        card.style.setProperty('--spot-y', (e.clientY - r.top) + 'px');
+      });
+    });
+
+    // Stat Counter
+    var sa = false;
+    var so = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting && !sa) {
+          sa = true;
+          document.querySelectorAll('[data-count]').forEach(function(el) {
+            var target = parseFloat(el.dataset.count);
+            var prefix = el.dataset.prefix || '';
+            var suffix = el.dataset.suffix || '';
+            var dec = el.dataset.decimal === 'true';
+            var dur = 2000, st = performance.now();
+            function tick(now) {
+              var p = Math.min((now - st) / dur, 1);
+              var eased = 1 - Math.pow(1 - p, 3);
+              el.textContent = prefix + (dec ? (target * eased).toFixed(1) : Math.floor(target * eased)) + suffix;
+              if (p < 1) requestAnimationFrame(tick);
+            }
+            requestAnimationFrame(tick);
+          });
+          so.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    var sg = document.getElementById('stats-grid');
+    if (sg) so.observe(sg);
+
+    // UTM → Tally
+    var params = new URLSearchParams(window.location.search);
+    var utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+    var utmData = {};
+    utmKeys.forEach(function(k) { var v = params.get(k); if (v) utmData[k] = v; });
+    if (Object.keys(utmData).length > 0) {
+      var frame = document.querySelector('iframe[data-tally-src]');
+      if (frame) {
+        var src = frame.dataset.tallySrc;
+        utmKeys.forEach(function(k) { if (utmData[k]) src += '&' + k + '=' + encodeURIComponent(utmData[k]); });
+        frame.dataset.tallySrc = src;
+      }
+    }
+
+    // Conversion tracking on form submit
+    window.addEventListener('message', function(e) {
+      if (e.data && e.data.event === 'Tally.FormSubmitted') {
+        if (typeof fbq === 'function') fbq('track', 'Lead', utmData);
+        if (typeof ttq !== 'undefined') ttq.track('SubmitForm', utmData);
+      }
+    });
+  })();
+  </script>
+
+</Layout>
