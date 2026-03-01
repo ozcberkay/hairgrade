@@ -356,6 +356,7 @@ html {
 /* === Tally Form Container === */
 .tally-container iframe {
   color-scheme: dark;
+  filter: invert(1) hue-rotate(180deg);
 }
 
 /* === Divider Line === */
